@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container for TaskForm and TaskList */
+div {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* To-Do List Title */
+.todo-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Task List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Edit and Delete Button Styling */
+button {
+  background-color: #ff6b6b; /* Default color for all buttons */
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+/* Edit Button */
+button.edit {
+  background-color: #28a745; /* Green color for Edit button */
+}
+
+button.edit:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Delete Button */
+button.delete {
+  background-color: #ff6b6b; /* Red color for Delete button */
+}
+
+button.delete:hover {
+  background-color: #ff4a4a;
+}
+
+button:hover {
+  background-color: #ff4a4a; /* Hover effect for all buttons */
+}
+
+/* Task Form Styling */
+form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border-color: #51cbee;
+}
+
+button[type="submit"] {
+  background-color: #51cbee;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3a9ecb;
+}
+
+/* Task Container Padding */
+ul, form {
+  margin-bottom: 20px;
+}
+
+/* Task Form Styling on Mobile */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  input[type="text"], button[type="submit"] {
+    width: 100%;
+  }
+}
